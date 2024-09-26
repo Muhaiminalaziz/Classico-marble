@@ -362,7 +362,7 @@ footer {
   background-color: var(--primary);
   text-align: center;
   padding: 1rem 0 3rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 footer .socials {
@@ -390,6 +390,7 @@ footer .links a {
 
 footer .credit {
   font-size: 0.8rem;
+  color: #fff;
 }
 
 footer .credit a {

@@ -20,11 +20,11 @@ document.addEventListener('click', function (e) {
 // Daftar section dan menu yang akan dihubungkan
 const sections = document.querySelectorAll('section');
 const menuItems = {
-  'home': document.getElementById('menu-home'),
-  'about': document.getElementById('menu-about'),
-  'menu': document.getElementById('menu-menu'),
-  'referensi': document.getElementById('menu-referensi'),
-  'contact': document.getElementById('menu-contact'),
+  home: document.getElementById('menu-home'),
+  about: document.getElementById('menu-about'),
+  menu: document.getElementById('menu-menu'),
+  referensi: document.getElementById('menu-referensi'),
+  contact: document.getElementById('menu-contact'),
 };
 
 // Callback untuk IntersectionObserver
