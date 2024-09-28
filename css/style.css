@@ -28,9 +28,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.4rem 7%;
-  background-color: #00000049;
-  border-bottom: 1px solid #ffffff;
-  position: fixed;
+  background-color: #57657449;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -107,7 +106,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 .main {
-  height: 100vh;
+  height: calc(100vh - 50px);
   width: 100%;
 }
 .wrapper,
@@ -150,6 +149,7 @@ body {
   font-size: 45px;
   font-weight: 600;
   color: #fff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
 a.button {
   display: inline-block;
@@ -199,6 +199,47 @@ a.button:hover {
   background-color: #0e579a;
 }
 
+.line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: #fff;
+  transform: translateX(-100%);
+  opacity: 0;
+  animation: line-timer 7s cubic-bezier(0.4, 0, 0, 1) infinite;
+  z-index: 2;
+  display: block;
+}
+
+@keyframes line-timer {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  40% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  60% {
+    transform: translateX(0);
+    opacity: 1;
+    animation-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0.5;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .nav-btn {
     visibility: hidden;
@@ -206,15 +247,6 @@ a.button:hover {
   .swiper-pagination-bullet {
     visibility: visible;
   }
-}
-
-.hero .content p {
-  font-size: 1.6rem;
-  margin-top: 1rem;
-  line-height: 1.4;
-  font-weight: 100;
-  color: #fff;
-  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
 
 .hero .content .cta {
@@ -233,7 +265,7 @@ a.button:hover {
 .menu,
 .contact,
 .referensi {
-  padding: 8rem 7% 1.4rem;
+  padding: 8rem 8% 1.5rem;
 }
 
 .about h2,
@@ -242,11 +274,11 @@ a.button:hover {
 .referensi h2 {
   text-align: center;
   font-size: 2.6rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .about h2 span,
-.meu h2 span,
+.menu h2 span,
 .contact h2 span,
 .referensi h2 span {
   color: var(--primary);
@@ -257,27 +289,28 @@ a.button:hover {
 }
 
 .about .row .about-img {
-  flex: 1 1 45rem;
+  flex: 1 1 50rem;
 }
 
-.about .row .about-img {
-  width: 100%;
+.about .row .about-img img {
+  width: 60%;
 }
 
 .about .row .content {
-  flex: 1 1 35rem;
+  flex: 1 1 50rem;
   padding: 0 1rem;
 }
 
 .about .row .content h3 {
   font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
 /*Menu Section*/
 .menu h2,
 .contact h2,
 .referensi h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 .menu p,
 .contact p,
@@ -285,7 +318,7 @@ a.button:hover {
   text-align: center;
   max-width: 30rem;
   margin: auto;
-  line-height: 1.6;
+  line-height: 1.6rem;
 }
 
 .menu .row {
