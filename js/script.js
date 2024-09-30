@@ -31,7 +31,6 @@ const menuItems = {
 const observerCallback = (entries, observer) => {
   entries.forEach((entry) => {
     let menu = menuItems[entry.target.id];
-    console.log(menuItems[entry.target.id]);
     if (entry.isIntersecting) {
       // Jika elemen terlihat, tambahkan kelas 'active' pada menu terkait
       menu.classList.add('aktif');
@@ -51,4 +50,26 @@ const observer = new IntersectionObserver(observerCallback, {
 // Mengamati setiap section
 sections.forEach((section) => {
   observer.observe(section);
+});
+
+// Scroll tombol wa
+let lastScrollTop = 0;
+let scrollThreshold = 200; // Atur batas sensitivitas
+let whatsApp = document.querySelector('.WhatsApp');
+
+window.addEventListener('scroll', function () {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  // Hanya deteksi scroll jika pergerakan melebihi ambang batas
+  if (Math.abs(scrollTop - lastScrollTop) > scrollThreshold) {
+    if (scrollTop > lastScrollTop) {
+      // Scroll ke bawah
+      whatsApp.classList.add('expand');
+    } else {
+      // Scroll ke atas
+      whatsApp.classList.remove('expand');
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Perbarui posisi terakhir
+  }
 });
