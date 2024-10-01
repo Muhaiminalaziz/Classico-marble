@@ -87,7 +87,7 @@ body {
   display: none;
 }
 .navbar .navbar-extra a {
-  color: #fff;
+  color: #ffff;
   margin: 0 0.5rem;
 }
 
@@ -354,7 +354,6 @@ a.button:hover {
   display: flex;
   margin-top: 2rem;
   background-color: #e9e9e9;
-  flex-wrap: wrap;
 }
 
 .contact .row .map {
@@ -485,13 +484,20 @@ footer .credit a {
 }
 
 /* Tablet */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   html {
     font-size: 62.5%;
   }
 
   .navbar-extra {
     display: inline-block;
+  }
+
+  /* Mobile Phone */
+  @media (max-width: 500px) {
+    html {
+      font-size: 55%;
+    }
   }
 
   .navbar .navbar-nav {
@@ -563,12 +569,5 @@ footer .credit a {
 
   .contact .row form {
     padding-top: 0;
-  }
-}
-
-/* Mobile Phone */
-@media (max-width: 450px) {
-  html {
-    font-size: 55%;
   }
 }
