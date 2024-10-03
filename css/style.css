@@ -511,6 +511,10 @@ footer {
   margin: 0;
 }
 
+.footer-distributed .footer-company-name {
+  color: #fff;
+}
+
 .footer-distributed .footer-center p span {
   display: block;
   font-weight: normal;
