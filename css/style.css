@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   color: #0e579a;
 }
@@ -68,7 +68,7 @@ body {
 }
 
 .navbar .navbar-nav a::after {
-  content: '';
+  content: "";
   display: block;
   padding-bottom: 0.5rem;
   border-bottom: 0.1rem solid var(--primary);
@@ -103,7 +103,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 .main {
   height: calc(100vh - 50px);
@@ -121,7 +121,7 @@ body {
   overflow: hidden;
 }
 .slide::before {
-  content: '';
+  content: "";
   position: absolute;
   height: 100%;
   width: 100%;
@@ -449,16 +449,21 @@ footer {
   font: bold 16px sans-serif;
   padding: 50px 50px 60px 50px;
   margin-top: 80px;
+  display: flex;
 }
 
-.footer-distributed,
+.footer-distributed > div {
+  width: 600px;
+}
+
+/* .footer-distributed,
 .footer-left,
 .footer-center,
 .footer-distributed,
 .footer-right {
   display: inline-block;
   vertical-align: top;
-}
+} */
 
 .footer-distributed .footer-left {
   width: 30%;
@@ -466,7 +471,7 @@ footer {
 
 .footer-distributed h3 {
   color: #fff;
-  font: normal 36px 'cookie' cursive;
+  font: normal 36px "cookie" cursive;
   margin: 0;
 }
 
@@ -486,7 +491,16 @@ footer {
   color: inherit;
 }
 
+.footer-distributed .footer-center {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer-distributed .footer-center a {
+  display: flex;
+  align-items: center;
+}
+.footer-distributed .footer-center a .ikon {
   background-color: #000000;
   color: #fff;
   font-size: 25px;
@@ -540,10 +554,14 @@ footer {
 
 .footer-distributed .footer-icons {
   margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .footer-distributed .footer-icons a {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 35px;
   height: 35px;
   cursor: pointer;
