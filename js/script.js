@@ -48,23 +48,23 @@ var btns = document.querySelectorAll('.btn');
 let currentSlidee = 1;
 
 // java manual slider
-var manualNav = function(manual){
+var manualNav = function (manual) {
   slidees.forEach((slidee) => {
     slidee.classList.remove('active');
 
-    btns.forEach(btn) => {
+    btns.forEach((btn) => {
       btn.classList.remove('active');
     });
   });
 
   slidees[manual].classList.add('active');
-  btsn[manual].classList.add('active');
-}
+  btns[manual].classList.add('active');
+};
 
-btsn.forEach((btn, i) => {
+btns.forEach((btn, i) => {
   btn.addEventListener('click', () => {
     manualNav(i);
-    currentSlidee= i;
+    currentSlidee = i;
   });
 });
 

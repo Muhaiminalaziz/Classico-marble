@@ -335,6 +335,11 @@ a.button:hover {
 }
 
 /* Slider Referensi */
+section#referensi .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 body .img-slider {
   height: 100vh;
   display: flex;
@@ -354,6 +359,13 @@ body .img-slider {
   z-index: 1;
   position: absolute;
   width: 100%;
+  clip-path: circle(0% at 0 50%);
+}
+
+.img-slider .slidee.active {
+  clip-path: circle(150% at 0 50%);
+  transition: 2s;
+  transition-property: clip-path;
 }
 
 .img-slider .slidee img {
@@ -413,7 +425,7 @@ body .img-slider {
   .img-slider .slidee .info {
     padding: 10px 25px;
   }
-  .img-slider .slide-img .info h2 {
+  .img-slider .slidee-img .info h2 {
     font-size: 30px;
   }
   .img-slider .slidee .info p {
