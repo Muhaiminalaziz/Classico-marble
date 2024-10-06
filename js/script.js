@@ -100,3 +100,10 @@ window.addEventListener('scroll', function () {
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Perbarui posisi terakhir
   }
 });
+
+// Loading screen
+window.onload = function () {
+  setInterval(() => {
+    document.querySelector('.loading-screen').style.display = 'none';
+  }, 200);
+};
