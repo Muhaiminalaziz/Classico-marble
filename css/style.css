@@ -263,6 +263,10 @@ a.button:hover {
   box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
 
+section {
+  min-height: 100vh;
+}
+
 /*About Section*/
 .about,
 .menu,
@@ -313,6 +317,7 @@ a.button:hover {
 }
 
 /*Menu Section*/
+
 .menu h2,
 .contact h2,
 .referensi h2 {
@@ -639,6 +644,7 @@ footer {
   margin-top: 80px;
   display: flex;
   justify-content: center;
+  flex-wrap: wra;
 }
 
 .footer-distributed > div {
@@ -660,12 +666,14 @@ footer {
 
 .footer-distributed h3 {
   color: #ffffff;
-  font-size: 25px;
+  font-size: 27px;
   margin: 0;
+  font-family: 'Courgette';
 }
 
 .footer-distributed h3 span {
   color: #ff8d30;
+  font-family: 'Courgette';
 }
 
 .footer-distributed .footer-links {

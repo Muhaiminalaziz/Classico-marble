@@ -68,6 +68,34 @@ btns.forEach((btn, i) => {
   });
 });
 
+// slider referensi otomatis
+var repeat = function (activeClass) {
+  let active = document.getElementsByClassName('active');
+  let i = 1;
+
+  var repeater = () => {
+    setTimeout(function () {
+      [...active].forEach((activeSlidee) => {
+        activeSlidee.classList.remove('active');
+      });
+
+      slidees[i].classList.add('active');
+      btns[i].classList.add('active');
+      i++;
+
+      if (slidees.length == i) {
+        i = 0;
+      }
+      if (i >= slidees.length) {
+        return;
+      }
+      repeater();
+    }, 5000);
+  };
+  repeater();
+};
+repeat();
+
 // Membuat instance IntersectionObserver
 const observer = new IntersectionObserver(observerCallback, {
   root: null, // Menggunakan viewport sebagai area pengamatan
