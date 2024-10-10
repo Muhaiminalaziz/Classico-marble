@@ -143,13 +143,13 @@ body {
   width: 100%;
   z-index: 100;
 }
-.image-data span.text {
+.image-data p {
   font-size: 14px;
   font-weight: 400;
   color: #fff;
 }
 .image-data h2 {
-  font-size: 45px;
+  font-size: 40px;
   font-weight: 600;
   color: #fff;
   text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
@@ -322,7 +322,7 @@ section {
 }
 
 .about .row .content h3 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   margin-bottom: 1rem;
 }
 

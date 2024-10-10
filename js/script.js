@@ -16,7 +16,6 @@ document.addEventListener('click', function (e) {
 });
 
 // slider
-
 // Menu navigasi
 // Daftar section dan menu yang akan dihubungkan
 const sections = document.querySelectorAll('section');
