@@ -281,14 +281,16 @@ section {
 .about,
 .menu,
 .contact,
-.referensi {
+.referensi,
+.our-customer {
   padding: 8rem 8% 1.5rem;
 }
 
 .about h2,
 .menu h2,
 .contact h2,
-.referensi h2 {
+.referensi h2,
+.our-customer h2 {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 2rem;
@@ -297,7 +299,8 @@ section {
 .about h2 span,
 .menu h2 span,
 .contact h2 span,
-.referensi h2 span {
+.referensi h2 span,
+.our-customer h2 span {
   color: var(--primary);
 }
 
@@ -330,12 +333,14 @@ section {
 
 .menu h2,
 .contact h2,
-.referensi h2 {
+.referensi h2,
+.our-customer h2 {
   margin-bottom: 1.5rem;
 }
 .menu p,
 .contact p,
-.referensi p {
+.referensi p,
+.our-customer p {
   text-align: center;
   max-width: 25rem;
   margin: auto;
