@@ -599,6 +599,10 @@ div.desc {
   cursor: pointer;
 }
 
+.contact .row form .btn:hover {
+  background-color: #0c4277;
+}
+
 /* Wa Floating Button */
 .WhatsApp {
   position: fixed;
@@ -629,6 +633,10 @@ div.desc {
 
 .wa_btn i {
   font-size: 25px;
+}
+
+.wa_btn:hover {
+  background-color: rgb(10, 133, 36);
 }
 
 .wa_btn span {
