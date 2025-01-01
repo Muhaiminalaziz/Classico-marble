@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - Penjualan Marmer dan Granit</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Classico-marble-main/Classico-marble-main/css/Penjualan.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Toko Classico</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#products">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#cartModal">
+                            Keranjang Belanja <span class="badge bg-danger" id="cartCount">0</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Selamat Datang di Classico Marmer & Granit</h1>
+            <p>Dapatkan produk terbaik dengan harga terjangkau!</p>
+            <a href="#products" class="btn btn-primary btn-lg">Belanja Sekarang</a>
+        </div>
+        <img src="/Classico-marble-main/Classico-marble-main/img/moon.png" alt="Hero Image" class="hero-img">
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Produk Marmer dan Granit</h2>
+            <div class="row">
+                <!-- Produk 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card product-card">
+                        <img src="/Classico-marble-main/Classico-marble-main/img/sampul.png" class="card-img-top" alt="Produk 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Marmer Putih</h5>
+                            <p class="card-text">Marmer putih berkualitas tinggi untuk interior rumah atau kantor.</p>
+                            <strong>Harga: Rp 100.000/m²</strong>
+                            <button class="btn btn-success add-to-cart" data-product="Marmer Putih" data-price="100000">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produk 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card product-card">
+                        <img src="/Classico-marble-main/Classico-marble-main/img/sampul.png" class="card-img-top" alt="Produk 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Granit Hitam</h5>
+                            <p class="card-text">Granit hitam elegan yang cocok untuk dapur atau lantai.</p>
+                            <strong>Harga: Rp 150.000/m²</strong>
+                            <button class="btn btn-success add-to-cart" data-product="Granit Hitam" data-price="150000">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produk 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card product-card">
+                        <img src="/Classico-marble-main/Classico-marble-main/img/sampul.png" class="card-img-top" alt="Produk 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Granit Abu-abu</h5>
+                            <p class="card-text">Granit abu-abu dengan tekstur halus, cocok untuk dekorasi modern.</p>
+                            <strong>Harga: Rp 200.000/m²</strong>
+                            <button class="btn btn-success add-to-cart" data-product="Granit Abu-abu" data-price="200000">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Keranjang Belanja Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Keranjang Belanja</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul id="cartItems" class="list-group">
+                        <li class="list-group-item">Keranjang kosong</li>
+                    </ul>
+                    <div class="mt-3">
+                        <strong>Total: Rp <span id="totalPrice">0</span></strong>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    <button type="button" class="btn btn-primary">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Toko Marmer & Granit. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const cart = [];
+        const cartCount = document.getElementById('cartCount');
+        const cartItems = document.getElementById('cartItems');
+        const totalPrice = document.getElementById('totalPrice');
+
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', () => {
+                const product = button.dataset.product;
+                const price = parseInt(button.dataset.price);
+
+                cart.push({ product, price });
+                updateCart();
+            });
+        });
+
+        function updateCart() {
+            cartCount.textContent = cart.length;
+            cartItems.innerHTML = '';
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                total += item.price;
+                cartItems.innerHTML += `
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        ${item.product} - Rp ${item.price}
+                        <button class="btn btn-danger btn-sm" onclick="removeItem(${index})">Hapus</button>
+                    </li>`;
+            });
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<li class="list-group-item">Keranjang kosong</li>';
+            }
+
+            totalPrice.textContent = total;
+        }
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+    </script>
+</body>
+</html>
